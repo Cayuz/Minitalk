@@ -34,6 +34,7 @@ int			ft_toupper(int c);
 /*===============================STRING================================*/
 
 int			ft_atoi(const char *nptr);
+long int	ft_atol(const char *nptr);
 char		*ft_itoa(int n, int base);
 
 void		ft_bzero(void *s, size_t n);
@@ -79,7 +80,7 @@ void		error_exit(void);
 
 typedef struct s_list
 {
-	int				value;
+	long			value;
 	int				index;
 	struct s_list	*next;
 }	t_list;

@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/10/16 14:26:55 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/08 19:42:19 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 21:32:32 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_atoi(const char *nptr)
 	r = 0;
 	if (!nptr)
 		return (0);
-	while ((nptr[i] >= 9 && nptr[i] <= 13) || nptr[i] == 32)
+	while (ft_isspace(nptr[i]))
 		i++;
 	if (nptr[i] == '-' || nptr[i] == '+')
 	{

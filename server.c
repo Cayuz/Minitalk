@@ -6,11 +6,11 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 16:57:41 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 20:50:42 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 21:29:20 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minitalk.h"
+#include "inc/minitalk.h"
 
 static void	handler(int signal, siginfo_t *client, void *context)
 {

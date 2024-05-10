@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 17:22:19 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 20:34:23 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/10 21:29:35 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 # include <unistd.h>
 # include <signal.h>
-# include "libft/inc/libft.h"
+# include "../libft/inc/libft.h"
 
 
 #endif
