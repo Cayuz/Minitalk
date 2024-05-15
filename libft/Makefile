@@ -5,7 +5,7 @@ INCLUDE		:=	inc/libft.h \
 				inc/get_next_line.h \
 
 CC			:= cc
-CFLAGS		:= -Wall -Werror -Wextra -g
+CFLAGS		:= -Wall -Werror -Wextra -g 
 
 SRC_CLASS	:= libft/class_fts/
 SRC_STRING	:= libft/string_fts/
@@ -25,6 +25,7 @@ SRC_FILES	:=	$(addprefix $(SRC_CLASS), \
 				ft_isspace.c \
 				ft_toupper.c \
 				ft_tolower.c \
+				isdigit_char.c \
 				) \
 				$(addprefix $(SRC_STRING), \
 				ft_strlen.c \
@@ -93,23 +94,23 @@ OBJS		:= $(addprefix $(OBJ_DIR), $(SRC_FILES:.c=.o))
 
 DIRS		:= $(SRC_CLASS) $(SRC_MEMORY) $(SRC_STRING) $(SRC_LIST) $(SRC_OUTPUT) $(SRC_PRINTF) $(SRC_GNL)
 
-all: $(NAME)
+all: $(NAME) 
 
 $(NAME): $(OBJS) $(INCLUDE)
 	@ echo "Libft is ready!"
-	@ ar rcs $(NAME) $?
+	@ ar rcs $(NAME) $? >/dev/null
 
 $(OBJ_DIR)%.o: %.c
 	@ mkdir -p $(addprefix $(OBJ_DIR), $(DIRS))
 	@ $(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	echo "Bye Bye object files!"
+	@ echo "Bye Bye object files!"
 	@ rm -rf $(OBJ_DIR)
 	@ rm -rf $(OBJS_BONUS)
 
 fclean: clean
-	echo "Bye Bye Libft!"
+	@ echo "Bye Bye Libft!"
 	@ rm -f $(NAME)
 
 re: fclean all

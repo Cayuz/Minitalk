@@ -28,6 +28,8 @@ bool		ft_isascii(int c);
 bool		ft_isprint(int c);
 bool		ft_isspace(int c);
 
+bool		isdigit_char(char *s);
+
 int			ft_tolower(int c);
 int			ft_toupper(int c);
 
