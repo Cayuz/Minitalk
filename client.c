@@ -6,13 +6,13 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 20:15:59 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/15 18:57:48 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/17 13:25:11 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "inc/minitalk.h"
 
-static int g_received = 0;
+static int	g_received = 0;
 
 static void	converter(int pid, char c)
 {
@@ -21,7 +21,7 @@ static void	converter(int pid, char c)
 	int	i;
 
 	i = 7;
-	while(i >= 0)
+	while (i >= 0)
 	{
 		b = (1 & (c >> i));
 		if (b == 0)

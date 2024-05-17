@@ -6,7 +6,7 @@
 /*   By: cavan-vl <cavan-vl@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2024/05/10 16:57:41 by cavan-vl      #+#    #+#                 */
-/*   Updated: 2024/05/10 21:29:20 by cavan-vl      ########   odam.nl         */
+/*   Updated: 2024/05/17 13:25:34 by cavan-vl      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static void	handler(int signal, siginfo_t *client, void *context)
 	count++;
 	if (count == 8 && c)
 	{
-		printf("%c", c);
+		ft_printf("%c", c);
 		count = 0;
 		c = 0;
 	}
@@ -33,7 +33,7 @@ static void	handler(int signal, siginfo_t *client, void *context)
 		if (kill(client->si_pid, SIGUSR2) == -1)
 			error_exit();
 		count = 0;
-		printf("\n\n");
+		ft_printf("\n\n");
 	}
 	if (kill(client->si_pid, SIGUSR1) == -1)
 		error_exit();
@@ -54,5 +54,5 @@ int	main(void)
 		return (1);
 	while (1)
 		pause();
-	return(0);
+	return (0);
 }
